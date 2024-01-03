@@ -1,1 +1,20 @@
-[ { "op": "add", "path": "/scripts/-", "value": "/interface/scripted/collections/pat_numberer.lua" } ]
+[
+  { "op": "add", "path": "/scripts/-", "value": "/interface/scripted/collections/pat_numberer.lua" },
+  { "op": "add", "path": "/gui/pat_numbererToggleButton", "value": {
+      "type": "button",
+      "position": [ 242, 11 ],
+      "visible": false,
+      "checkable": true,
+      "checked": true,
+      "base": "/interface/scripted/collections/pat_numberertoggle.png:off",
+      "hover": "/interface/scripted/collections/pat_numberertoggle.png:off.hover",
+      "pressed": "/interface/scripted/collections/pat_numberertoggle.png:off.press",
+      "baseImageChecked": "/interface/scripted/collections/pat_numberertoggle.png:on",
+      "hoverImageChecked": "/interface/scripted/collections/pat_numberertoggle.png:on.hover",
+      "pressedImageChecked": "/interface/scripted/collections/pat_numberertoggle.png:on.press",
+      "pressedOffset": [ 0, 0 ],
+      "callback": "pat_setIndexLabels",
+      "data": "unfucked numbers"
+    } },
+  { "op": "add", "path": "/scriptWidgetCallbacks/-", "value": "pat_setIndexLabels" }
+]

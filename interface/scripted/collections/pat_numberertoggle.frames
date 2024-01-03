@@ -1,0 +1,10 @@
+{
+  "frameGrid": {
+    "size": [ 12, 7 ],
+    "dimensions": [ 3, 2 ],
+    "names": [
+      [ "off", "off.hover", "off.press" ],
+      [ "on", "on.hover", "on.press" ]
+    ]
+  }
+}
