@@ -14,7 +14,7 @@
       "pressedImageChecked": "/interface/scripted/collections/pat_numberertoggle.png:on.press",
       "pressedOffset": [ 0, 0 ],
       "callback": "pat_setIndexLabels",
-      "data": "unfucked numbers"
+      "data": "fixed numbering"
     } },
   { "op": "add", "path": "/scriptWidgetCallbacks/-", "value": "pat_setIndexLabels" }
 ]
