@@ -1,10 +1,11 @@
 {
+  "version" : "1.1",
   "author" : "patmang",
+  "tags" : "User Interface",
   "description" : "the collections tab now counts instead of just using the \"order\" value\nhelps avoid duplicate and missing numbers with modded collection stuff\nthere is a toggle if you. want to turn it off. \n\n[img]https://i.imgur.com/wXjYMqP.gif[/img]https://discord.gg/GdsQSgV\n[img]https://i.imgur.com/uyG8oTa.gif[/img]https://www.patreon.com/pathiccstar\n[img]https://i.imgur.com/xVfcRRH.gif[/img]https://ko-fi.com/patmanf",
-  "friendlyName" : "Collection numberer",
-  "link" : "steam://url/CommunityFilePage/3130082417",
   "name" : "pat_collectionnumberer",
   "steamContentId" : "3130082417",
-  "tags" : "User Interface",
-  "version" : "1"
+  "friendlyName" : "Collection numberer",
+  "link" : "steam://url/CommunityFilePage/3130082417",
+  "includes" : ["communityframework"]
 }
