@@ -5,8 +5,8 @@ local populateList_old = populateList
 function populateList(...)
   populateList_old(...)
 
-  if not self.collectionName then return end
-
+  if not self.collectionName or self.collectionName == "customCollections" then return end
+  
   local collectables = root.collectables(self.collectionName)
   table.sort(collectables, function(a, b) return a.order < b.order end)
 
@@ -25,10 +25,11 @@ function populateList(...)
 end
 
 function pat_setIndexLabels()
-  if not self.collectionName then return end
+  if not self.collectionName or self.collectionName == "customCollections" then return end
 
   local indexesEnabled = widget.getChecked("pat_numbererToggleButton")
   local labels = indexLabels[self.collectionName]
+  if not labels then return end
 
   for widgetName, collectable in pairs(self.currentCollectables) do
     local text = indexesEnabled and labels[collectable.name] or collectable.order
