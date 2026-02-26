@@ -50,7 +50,7 @@ end
 local init_old = init
 function init(...)
   init_old(...)
-  widget.setChecked("pat_numbererToggleButton", not not getmetatable''.pat_collectionNumbererEnabled)
+  widget.setChecked("pat_numbererToggleButton", getmetatable''.pat_collectionNumbererEnabled ~= false)
 end
 
 local uninit_old = uninit
