@@ -1,9 +1,9 @@
 local indexLabels = {}
 pat_indexLabels = indexLabels
 
-local populateList_old = populateList
+local _populateList = populateList
 function populateList(...)
-  populateList_old(...)
+  if _populateList then _populateList(...) end
 
   if not self.collectionName or self.collectionName == "customCollections" then return end
   
@@ -37,24 +37,26 @@ function pat_setIndexLabels()
   end
 end
 
-local createTooltip_old = createTooltip
-function createTooltip(screenPosition, ...)
+local _createTooltip = createTooltip
+function createTooltip(screenPosition)
   local child = widget.getChildAt(screenPosition)
   if child == ".pat_numbererToggleButton" then
     return widget.getData("pat_numbererToggleButton")
   end
 
-  return createTooltip_old(screenPosition, ...)
+  if _createTooltip then
+    return _createTooltip(screenPosition)
+  end
 end
 
-local init_old = init
-function init(...)
-  init_old(...)
+local _init = init
+function init()
+  if _init then _init() end
   widget.setChecked("pat_numbererToggleButton", getmetatable''.pat_collectionNumbererEnabled ~= false)
 end
 
-local uninit_old = uninit
-function uninit(...)
-  if uninit_old then uninit_old() end
+local _uninit = uninit
+function uninit()
+  if _uninit then _uninit() end
   getmetatable''.pat_collectionNumbererEnabled = widget.getChecked("pat_numbererToggleButton")
 end
